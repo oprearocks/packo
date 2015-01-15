@@ -2,7 +2,7 @@
   "name": "packo",
   "version": "1.0.0",
   "description": "An npm module scaffolding cli tool.",
-  "main": "./bin/packo",
+  "main": "index.js",
   "directories": {
     "doc": "doc",
     "example": "examples",
@@ -15,6 +15,9 @@
     "scaffolding",
     "node_modules"
   ],
+  "bin" : {
+      "packo" : "./bin/packo"
+  },
   "author": "Adrian Oprea",
   "license": "MIT",
   "dependencies": {
