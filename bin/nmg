@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var fs        = require('fs');
+var path      = require('path');
+
+var commander = require('commander');
+
+var scaffold  = require('../lib/scaffold');
+var constants = require('../lib/constants');
+
+var helpFileContents = fs.readFileSync(__dirname + '/../lib/example.txt', 'UTF-8');
+
+commander.version('1.0.0')
+    .option('-d, --dir <directory>', 'Application <directory>.')
+    .option('-i, --init', 'Initialize with package.json (runs npm init).')
+    .option('-b, --bin', 'The module can be executed from the command line.')
+    .usage('[options]')
+    .parse(process.argv);
+
+commander.on('--help', function() {
+    process.stdout.write(helpFileContents);
+});
+
+if (process.argv.length == 2) {
+    commander.outputHelp();
+    process.exit(constants.ERROR_EXIT);
+}
+
+if (commander.dir) {
+    if (fs.existsSync(path.join(process.cwd(), commander.dir))) {
+        process.stdout.write('A file or directory with the same name already exists -- ABORTING!');
+        process.exit(constants.ERROR_EXIT);
+    }
+
+    scaffold(commander.dir, {
+        init : commander.init,
+        bin  : commander.bin
+    });
+}

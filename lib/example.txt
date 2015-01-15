@@ -1,0 +1,5 @@
+  Examples:
+    $ nmg --dir=application-dir           Scaffolds a new module in the <application-dir> directory
+    $ nmg --dir=application-dir --init    Scaffolds module and initializes package.json.
+    $ nmg --dir=myModule --init --bin     Npm module that also exposes a CLI.
+

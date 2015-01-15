@@ -1,0 +1,24 @@
+{
+  "name": "nmg",
+  "version": "1.0.0",
+  "description": "An npm module scaffolding cli tool.",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "scaffolding",
+    "node_modules"
+  ],
+  "author": "Adrian Oprea",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.6.0",
+    "npm": "^2.1.18"
+  }
+}
