@@ -12,7 +12,7 @@ var constants = require('../lib/constants');
 
 var helpFileContents = fs.readFileSync(__dirname + '/../lib/example.txt', 'UTF-8');
 
-var currentVersion = JSON.parse(fs.readFileSync('../package.json')).version;
+var currentVersion = JSON.parse(fs.readFileSync(__dirname + '/../package.json')).version;
 
 commander.version(currentVersion)
     .option('-d, --dir <directory>', 'Application <directory>.')
