@@ -32,7 +32,7 @@ if (process.argv.length == 2) {
 
 if (commander.dir) {
     if (fs.existsSync(path.join(process.cwd(), commander.dir))) {
-        process.stdout.write('A file or directory with the same name already exists -- ABORTING!');
+        process.stdout.write('A file or directory with the same name already exists -- ABORTING!\n');
         process.exit(constants.ERROR_EXIT);
     }
 
