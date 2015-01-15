@@ -12,7 +12,9 @@ var constants = require('../lib/constants');
 
 var helpFileContents = fs.readFileSync(__dirname + '/../lib/example.txt', 'UTF-8');
 
-commander.version('1.0.0')
+var currentVersion = JSON.parse(fs.readFileSync('../package.json')).version;
+
+commander.version(currentVersion)
     .option('-d, --dir <directory>', 'Application <directory>.')
     .option('-i, --init', 'Initialize with package.json (runs npm init).')
     .option('-b, --bin', 'The module can be executed from the command line.')
