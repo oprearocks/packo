@@ -1,6 +1,7 @@
-# packo - [https://github.com/opreaadrian/packo](https://github.com/opreaadrian/packo)
+# packo (WIP)
+### An npm package scaffolding tool
 
-> An npm module scaffolding tool -- WIP
+> GitHub repository: [https://github.com/opreaadrian/packo](https://github.com/opreaadrian/packo)
 
 This project emerged out of the need to create and recreate the folder structure necessary to create a node module. I took a look at the most frequently downloaded npm modules and observed their folder structure. Based on this research, I found a common pattern amongst them, a pattern that forms the base of this module.
 
@@ -32,5 +33,5 @@ The tool will generate a folder structure similar to the one below:
 ## Contributing
 Just fork the repo, make your changes, create a pull request. I would have loved to say fork->change->run tests->submit pull request, so if anyone can help with tests, feel free to do that.
 
-## Final thoughts: This is work in progress, so if there are suggestions, get in touch via the issues panel, or via Twitter -- [@opreaadrian](https://twitter.com/opreaadrian).
+## Final thoughts: This is work in progress, so if there are suggestions, get in touch via [the repository's issues panel](https://github.com/opreaadrian/packo/issues) on GitHub , or via Twitter -- [@opreaadrian](https://twitter.com/opreaadrian).
 
