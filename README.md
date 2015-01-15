@@ -30,5 +30,5 @@ The tool will generate a folder structure similar to the one below:
 ## Contributing
 Just fork the repo, make your changes, create a pull request. I would have loved to say fork->change->run tests->submit pull request, so if anyone can help with tests, feel free to do that.
 
-## Final thoughts: This is work in progress, so if there are suggestions, please create an issue or get in touch via the issues panel, or via Twitter -- [@opreaadrian](https://twitter.com/opreaadrian).
+## Final thoughts: This is work in progress, so if there are suggestions, get in touch via the issues panel, or via Twitter -- [@opreaadrian](https://twitter.com/opreaadrian).
 
