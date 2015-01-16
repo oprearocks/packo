@@ -5,6 +5,27 @@
 
 This project emerged out of the need to create and recreate the folder structure necessary to create a node module. I took a look at the most frequently downloaded npm modules and observed their folder structure. Based on this research, I found a common pattern amongst them, a pattern that forms the base of this module.
 
+## Installation
+
+    $ npm install -g packo
+    $ packo
+
+      Usage: packo [options]
+
+      Options:
+
+        -h, --help             output usage information
+        -V, --version          output the version number
+        -d, --dir <directory>  Application <directory>.
+        -i, --init             Initialize with package.json (runs npm init).
+        -b, --bin              The module can be executed from the command line.
+
+      Examples:
+        $ packo --dir=application-dir           Scaffolds a new module in the <application-dir> directory
+        $ packo --dir=application-dir --init    Scaffolds module and initializes package.json.
+        $ packo --dir=myModule --init --bin     Npm module that also exposes a CLI.
+
+
 ## Folder structure
 The tool will generate a folder structure similar to the one below:
 
