@@ -20,10 +20,10 @@
   },
   "repository" : {
       "type" : "git",
-      "url"  : "https://github.com/opreλdrian/packo"
+      "url"  : "https://github.com/opreaadrian/packo"
   },
   "bugs" : {
-      "url" : "https://github.com/opreλdrian/packo/issues"
+      "url" : "https://github.com/opreaadrian/packo/issues"
   },
   "author": "Adrian Oprea",
   "license": "MIT",
