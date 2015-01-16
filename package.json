@@ -1,6 +1,6 @@
 {
   "name": "packo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "An npm module scaffolding cli tool.",
   "main": "index.js",
   "directories": {
@@ -18,12 +18,12 @@
   "bin": {
     "packo": "./bin/packo"
   },
-  "repository" : {
-      "type" : "git",
-      "url"  : "https://github.com/opreaadrian/packo"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opreaadrian/packo"
   },
-  "bugs" : {
-      "url" : "https://github.com/opreaadrian/packo/issues"
+  "bugs": {
+    "url": "https://github.com/opreaadrian/packo/issues"
   },
   "author": "Adrian Oprea",
   "license": "MIT",
