@@ -10,20 +10,24 @@ This project emerged out of the need to create and recreate the folder structure
     $ npm install -g packo
     $ packo
 
-      Usage: packo [options]
+      Usage: packo [cmd] options
+
+
+      Commands:
+
+        create [module]  Create a module named [module]. Current directory name is used by default.
 
       Options:
 
-        -h, --help             output usage information
-        -V, --version          output the version number
-        -d, --dir <directory>  Application <directory>.
-        -i, --init             Initialize with package.json (runs npm init).
-        -b, --bin              The module can be executed from the command line.
+        -h, --help     output usage information
+        -V, --version  output the version number
+        -b, --bin      Add bin/ folder and executable file for module.
+        -i, --init     Initialize the module with a package.json file.
 
       Examples:
-        $ packo --dir=application-dir           Scaffolds a new module in the <application-dir> directory
-        $ packo --dir=application-dir --init    Scaffolds module and initializes package.json.
-        $ packo --dir=myModule --init --bin     Npm module that also exposes a CLI.
+        $ packo create awesome-module                 Scaffolds the "awesome-module" package.
+        $ packo create awesome-module --init          Scaffolds module and initializes package.json.
+        $ packo create awesome-module --init --bin    Adds "bin/" dir for module that expose a CLI.
 
 
 ## Folder structure

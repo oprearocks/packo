@@ -2,42 +2,33 @@
 
 'use strict';
 
-var fs        = require('fs');
-var path      = require('path');
+var fs        = require('fs'),
+    constants = require('../lib/constants'),
+    helpFileContents = fs.readFileSync(__dirname + '/../lib/example.txt', 'UTF-8'),
+    pkg = require('../package.json'),
+    CLI = require('../lib/cli'),
+    program = require('commander');
 
-var commander = require('commander');
+program.version(pkg.version)
+    .option('-b, --bin', 'Add bin/ folder and executable file for module.')
+    .option('-i, --init', 'Initialize the module with a package.json file.')
+    .usage('[cmd] options');
 
-var scaffold  = require('../lib/scaffold');
-var constants = require('../lib/constants');
 
-var helpFileContents = fs.readFileSync(__dirname + '/../lib/example.txt', 'UTF-8');
-
-var currentVersion = JSON.parse(fs.readFileSync(__dirname + '/../package.json')).version;
-
-commander.version(currentVersion)
-    .option('-d, --dir <directory>', 'Application <directory>.')
-    .option('-i, --init', 'Initialize with package.json (runs npm init).')
-    .option('-b, --bin', 'The module can be executed from the command line.')
-    .usage('[options]')
-    .parse(process.argv);
-
-commander.on('--help', function() {
+program.on('--help', function() {
     process.stdout.write(helpFileContents);
 });
 
-if (process.argv.length == 2) {
-    commander.outputHelp();
-    process.exit(constants.ERROR_EXIT);
-}
-
-if (commander.dir) {
-    if (fs.existsSync(path.join(process.cwd(), commander.dir))) {
-        process.stdout.write('A file or directory with the same name already exists -- ABORTING!\n');
-        process.exit(constants.ERROR_EXIT);
-    }
-
-    scaffold(commander.dir, {
-        init : commander.init,
-        bin  : commander.bin
+program.command('create [module]')
+    .description('Create a module named [module]. Current directory name is used by default.')
+    .action(function (moduleName, options) {
+        CLI.createModule(moduleName, options);
     });
+
+program
+    .parse(process.argv);
+
+if (process.argv.length == 2) {
+    program.outputHelp();
+    process.exit(constants.ERROR_EXIT);
 }
