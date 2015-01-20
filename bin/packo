@@ -11,7 +11,6 @@ var fs        = require('fs'),
 
 program.version(pkg.version)
     .option('-b, --bin', 'Add bin/ folder and executable file for module.')
-    .option('-i, --init', 'Initialize the module with a package.json file.')
     .usage('[cmd] options');
 
 
@@ -21,7 +20,7 @@ program.on('--help', function() {
 
 program.command('create [module]')
     .description('Create a module named [module]. Current directory name is used by default.')
-    .action(function (moduleName, options) {
+    .action(function(moduleName, options) {
         CLI.createModule(moduleName, options);
     });
 

@@ -22,13 +22,24 @@ This project emerged out of the need to create and recreate the folder structure
         -h, --help     output usage information
         -V, --version  output the version number
         -b, --bin      Add bin/ folder and executable file for module.
-        -i, --init     Initialize the module with a package.json file.
 
       Examples:
-        $ packo create awesome-module                 Scaffolds the "awesome-module" package.
-        $ packo create awesome-module --init          Scaffolds module and initializes package.json.
-        $ packo create awesome-module --init --bin    Adds "bin/" dir for module that expose a CLI.
+        $ packo create                              Scaffolds an npm package in the current directory.
+        $ packo create awesome-module               Scaffolds the "awesome-module" package.
+        $ packo create awesome-module --bin         Adds "bin/" dir for module that expose a CLI.
 
+## Caution
+
+        $ packo create awesome-module
+        The directory "awesome-module" already exists, do you want to overwrite?(y/n):
+
+By answering with "y" or "Y", you acknowledge the fact that everything will be deleted from the "awesome-module" directory.
+
+Same holds true when running `packo create` with no module name argument, as the tool treats the current directory as the module's root, and scaffolds the structure inside it.
+
+    $ mkdir awesome-module && cd awesome-module
+    $ packo create
+    The directory "awesome-module" already exists, do you want to overwrite?(y/n):
 
 ## Folder structure
 The tool will generate a folder structure similar to the one below:

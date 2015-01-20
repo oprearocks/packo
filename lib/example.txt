@@ -1,5 +1,5 @@
   Examples:
-    $ packo create awesome-module                 Scaffolds the "awesome-module" package.
-    $ packo create awesome-module --init          Scaffolds module and initializes package.json.
-    $ packo create awesome-module --init --bin    Adds "bin/" dir for module that expose a CLI.
+    $ packo create                              Scaffolds an npm package in the current directory.
+    $ packo create awesome-module               Scaffolds the "awesome-module" package.
+    $ packo create awesome-module --bin         Adds "bin/" dir for module that expose a CLI.
 
