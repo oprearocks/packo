@@ -18,10 +18,16 @@ program.on('--help', function() {
     process.stdout.write(helpFileContents);
 });
 
-program.command('create [module]')
-    .description('Create a module named [module]. Current directory name is used by default.')
-    .action(function(moduleName, options) {
-        CLI.createModule(moduleName, options);
+program.command('create [package]')
+    .description('Create a package named [package]. Current directory name is used by default.')
+    .action(function(packageName, options) {
+        CLI.createPackage(packageName, options);
+    });
+
+program.command('module [name]')
+    .description('Create the "lib/[name].js" module. Also creates "test/[name]_spec.js" for the module.')
+    .action(function(moduleName) {
+        CLI.createModule(moduleName);
     });
 
 program

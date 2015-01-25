@@ -3,7 +3,7 @@
 
 > GitHub repository: [https://github.com/opreaadrian/packo](https://github.com/opreaadrian/packo)
 
-This project emerged out of the need to create and recreate the folder structure necessary to create a node module. I took a look at the most frequently downloaded npm modules and observed their folder structure. Based on this research, I found a common pattern amongst them, a pattern that forms the base of this module.
+This project emerged out of the need to create and recreate the folder structure necessary to create a package that I could easily install from a private NPM instance. I took a look at the most frequently downloaded npm packages and observed their folder structure. Based on this research, I found a common pattern amongst them, a pattern that forms the base of this tool.
 
 ## Installation
 
@@ -15,36 +15,38 @@ This project emerged out of the need to create and recreate the folder structure
 
       Commands:
 
-        create [module]  Create a module named [module]. Current directory name is used by default.
+        create [package]  Create a package named [package]. Current directory name is used by default.
+        module [name]     Create the "lib/[name].js" module. Also creates "test/[name]_spec.js" for the module.
 
       Options:
 
         -h, --help     output usage information
         -V, --version  output the version number
-        -b, --bin      Add bin/ folder and executable file for module.
+        -b, --bin      Add bin/ folder and executable file for package.
 
       Examples:
         $ packo create                              Scaffolds an npm package in the current directory.
-        $ packo create awesome-module               Scaffolds the "awesome-module" package.
-        $ packo create awesome-module --bin         Adds "bin/" dir for module that expose a CLI.
+        $ packo create awesome-package               Scaffolds the "awesome-package" package.
+        $ packo create awesome-package --bin         Adds "bin/" dir for package that expose a CLI.
+        $ packo module dataReader                    Creates "lib/dataReader.js" and "test/dataReader_spec.js"
 
 ## Caution
 
-        $ packo create awesome-module
-        The directory "awesome-module" already exists, do you want to overwrite?(y/n):
+        $ packo create awesome-package
+        The directory "awesome-package" already exists, do you want to overwrite?(y/n):
 
-By answering with "y" or "Y", you acknowledge the fact that everything will be deleted from the "awesome-module" directory.
+By answering with "y" or "Y", you acknowledge the fact that everything will be deleted from the "awesome-package" directory.
 
-Same holds true when running `packo create` with no module name argument, as the tool treats the current directory as the module's root, and scaffolds the structure inside it.
+Same holds true when running `packo create` with no `[name]` argument, as the tool treats the current directory as the pacakge's root, and scaffolds the structure inside it.
 
-    $ mkdir awesome-module && cd awesome-module
+    $ mkdir awesome-package && cd awesome-package
     $ packo create
-    The directory "awesome-module" already exists, do you want to overwrite?(y/n):
+    The directory "awesome-package" already exists, do you want to overwrite?(y/n):
 
 ## Folder structure
 The tool will generate a folder structure similar to the one below:
 
-    module_folder/
+    package_folder/
         .editorconfig
         .jshintrc
         .gitignore
@@ -63,7 +65,7 @@ The tool will generate a folder structure similar to the one below:
 * Make the tool more flexible in terms of options.
 * Create a friendlier, more coloured CLI.
 * Improve code quality.
-* Enable the possibility to add library modules, to the `lib/` folder via CLI, and also generate the appropriate spec file withing the `test/` directory.
+* __[DONE]__ Enable the possibility to add library modules, to the `lib/` folder via CLI, and also generate the appropriate spec file withing the `test/` directory.
 * Add Gulp/Grunt workflows -- probably Gulp.
 
 ## Contributing
