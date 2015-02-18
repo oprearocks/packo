@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/packo.png?downloads=true)](https://nodei.co/npm/packo/)
+
 # packo (WIP)
 ### An npm package scaffolding tool
 
