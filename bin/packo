@@ -30,6 +30,18 @@ program.command('module [name]')
         CLI.createModule(moduleName);
     });
 
+/**
+ * @example
+ *
+ * packo check # Validates the current package dependencies. Uses npm-shrinkwrap.json.
+ * packo check <PACKAGE> # Checks <PACKAGE> reported vulnerabilites on https://nodesecurity.io/advisories
+ */
+program.command('check [module]')
+    .description('Check for vulnerabilities in the current module\'s dependencies -- uses `npm shrinkwrap`.')
+    .action(function(module) {
+        CLI.checkDependencies(module);
+    });
+
 program
     .parse(process.argv);
 
