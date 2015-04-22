@@ -1,6 +1,9 @@
   Examples:
     $ packo create                              Scaffolds an npm package in the current directory.
-    $ packo create awesome-package               Scaffolds the "awesome-package" package.
-    $ packo create awesome-package --bin         Adds "bin/" dir for module that expose a CLI.
-    $ packo module dataReader                    Creates "lib/dataReader.js" and "test/dataReader_spec.js"
+    $ packo create awesome-package              Scaffolds the "awesome-package" package.
+    $ packo create awesome-package --bin        Adds "bin/" dir for module that expose a CLI.
+    $ packo module dataReader                   Creates "lib/dataReader.js" and "test/dataReader_spec.js"
+    $ packo check                               Validates npm-shrinkwrap.json against the Node Security Project API
+    $ packo check semver@4.2.0                  Checks the semver module, version 4.2.2 for vulnerabilities against the Node Security Project API
+    $ packo check semver                        Checks the latest version of the semver module.
 
