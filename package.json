@@ -29,7 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^0.9.0",
-    "chalk": "^1.0.0",
+    "chalk": "https://registry.npmjs.org/chalk/-/chalk-1.0.0.tgz",
     "commander": "^2.6.0",
     "npm": "^2.1.18",
     "nsp-api": "^1.0.3"
