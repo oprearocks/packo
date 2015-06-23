@@ -2,12 +2,12 @@
 
 'use strict';
 
-var fs        = require('fs'),
-    constants = require('../lib/constants'),
-    helpFileContents = fs.readFileSync(__dirname + '/../lib/example.txt', 'UTF-8'),
-    pkg = require('../package.json'),
-    CLI = require('../lib/cli'),
-    program = require('commander');
+var fs        = require('fs');
+var constants = require('../lib/constants');
+var helpFileContents = fs.readFileSync(__dirname + '/../lib/example.txt', 'UTF-8');
+var pkg = require('../package.json');
+var CLI = require('../lib/cli');
+var program = require('commander');
 
 program.version(pkg.version)
     .option('-b, --bin', 'Add bin/ folder and executable file for module.')
