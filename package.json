@@ -1,6 +1,6 @@
 {
   "name": "packo",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "An npm module scaffolding cli tool.",
   "main": "index.js",
   "directories": {
