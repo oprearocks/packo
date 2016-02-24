@@ -16,7 +16,7 @@
     "node_modules"
   ],
   "bin": {
-    "packo": "./bin/packo"
+    "packo": "./bin/packo.js"
   },
   "repository": {
     "type": "git",
