@@ -1,0 +1,7 @@
+{
+    "package": "Add bin/ folder and executable file for module.",
+    "create":  "Create a package named [package]. Current directory name is used by default.",
+    "module": "Create the \"lib/[name].js\" module. Also creates \"test/[name]_spec.js\" for the module.",
+    "check": "Check for vulnerabilities in the current module's dependencies -- uses `npm shrinkwrap`."
+
+}
