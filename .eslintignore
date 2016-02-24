@@ -1,0 +1,5 @@
+node_modules/*
+**/*.min.js
+test/mocha.opts
+**/npm-debug.log
+package.json
