@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/cli/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">lib/cli/</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.91% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>12/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.91% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>12/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var fs        = require('fs');
+var path      = require('path');
+var program   = require('commander') ;
+var constants = require('../constants');
+var scaffold  = require('../scaffold');
+var NSPAPI    = require('nsp-api');
+var chalk     = require('chalk');
+var inquirer  = require('inquirer');
+&nbsp;
+exports.createPackage = <span class="fstat-no" title="function not covered" >function(moduleName) {</span>
+<span class="cstat-no" title="statement not covered" >    inquirer.prompt([</span>
+        {
+            type : 'confirm',
+            name : 'cli',
+            message : 'Will you use the module from the command line? (create bin/ dir)',
+            default : false
+        },
+        {
+            type : 'confirm',
+            name : 'editorconfig',
+            message : 'Add EditorConfig? [http://editorconfig.org]',
+            default : true
+        },
+        {
+            type : 'confirm',
+            name : 'gitignore',
+            message : 'Add node_modules to .gitignore to prevent versioning?',
+            default : true
+        },
+        {
+            type : 'list',
+            name : 'lint',
+            message : 'What linting tool do you want to use?',
+            default : 'JSHint',
+            choices : ['JSHint', 'ESLint']
+        },
+    ], <span class="fstat-no" title="function not covered" >function (answers) {</span>
+<span class="cstat-no" title="statement not covered" >        var modulePath = '';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (moduleName) {</span>
+<span class="cstat-no" title="statement not covered" >            modulePath = path.join(process.cwd(), moduleName);</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            modulePath = process.cwd();</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var scaffoldOptions = answers;</span>
+<span class="cstat-no" title="statement not covered" >        scaffoldOptions.moduleExists = fs.existsSync(modulePath);</span>
+<span class="cstat-no" title="statement not covered" >        scaffold(modulePath, scaffoldOptions);</span>
+    });
+};
+&nbsp;
+exports.createModule = <span class="fstat-no" title="function not covered" >function(moduleName) {</span>
+<span class="cstat-no" title="statement not covered" >    var modulePath = path.join(process.cwd(), 'lib', moduleName + '.js'),</span>
+        specPath = path.join(process.cwd(), 'test', moduleName + '_spec.js');
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!fs.existsSync(path.join(process.cwd(), 'package.json'))) {</span>
+<span class="cstat-no" title="statement not covered" >        process.stdout.write('In order to create a module you must be in the root folder of an npm module.\n');</span>
+<span class="cstat-no" title="statement not covered" >        process.stdout.write('You are here: ' + path.join(process.cwd()) + '\n');</span>
+<span class="cstat-no" title="statement not covered" >        process.exit(constants.ERROR_EXIT);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!fs.existsSync(modulePath) &amp;&amp; !fs.existsSync(specPath)){</span>
+<span class="cstat-no" title="statement not covered" >        fs.writeFile(modulePath, '', <span class="fstat-no" title="function not covered" >function(err) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                throw err;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            fs.writeFileSync(specPath, '');</span>
+<span class="cstat-no" title="statement not covered" >            process.stdout.write('Successfully created lib/' + moduleName + '.js module and test/' + moduleName + '_spec.js.\n');</span>
+<span class="cstat-no" title="statement not covered" >            process.exit(constants.SUCCESS_EXIT);</span>
+        });
+    } else {
+<span class="cstat-no" title="statement not covered" >        process.stdout.write('There was a problem creating your module.\n');</span>
+<span class="cstat-no" title="statement not covered" >        process.exit(constants.ERROR_EXIT);</span>
+    }
+&nbsp;
+};
+&nbsp;
+/**
+ * Performs validations against the Node Security Project reports
+ *
+ * @see https://www.npmjs.com/package/nsp-api
+ * @see  https://nodesecurity.io
+ *
+ * @param  {object} [moduleName] Optional parameter. If specified, the validation takes place for the
+ * specified module, and not for all the dependencies. If not specified, the application will try to
+ * use npm-shrinkwrap.json.
+ */
+exports.checkDependencies = <span class="fstat-no" title="function not covered" >function(moduleName) {</span>
+&nbsp;
+    /**
+     * Outputs the results coming from the Node Security Project API
+     *
+     * @param  {object} err     The error object passed by the NSPAPI module if something goes wrong.
+     * @param  {object} results An object containing all the vulnerabilities found for the current API
+     * call.
+     */
+<span class="fstat-no" title="function not covered" >    function _validationHandler(err, results) {</span>
+<span class="cstat-no" title="statement not covered" >        console.log(chalk.black.bgYellow('Validating... hold on tight!'));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            throw err;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        console.log(results.length === 0 ?</span>
+            'Yay, no vulnerabilities here!' : JSON.stringify(results, null, 2));
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (moduleName &amp;&amp; typeof moduleName === 'string') {</span>
+        // semver@4.2.0 = ["semver", "4.2.0"]
+<span class="cstat-no" title="statement not covered" >        var moduleData = moduleName.split('@');</span>
+&nbsp;
+        /**
+         * @see  https://www.npmjs.com/package/nsp-api#validatemodule-module-version-callback
+         */
+<span class="cstat-no" title="statement not covered" >        NSPAPI.validateModule(moduleData[0], moduleData[1], _validationHandler);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >        var shrinkwrap = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'npm-shrinkwrap.json')));</span>
+        /**
+         * @see  https://www.npmjs.com/package/nsp-api#validateshrinkwrap-shrinkwrap-callback
+         */
+<span class="cstat-no" title="statement not covered" >        NSPAPI.validateShrinkwrap(shrinkwrap, _validationHandler);</span>
+    }
+};
+&nbsp;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jun 06 2016 16:04:18 GMT+0300 (EEST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

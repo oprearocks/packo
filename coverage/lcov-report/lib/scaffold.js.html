@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/scaffold.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">lib/</a> scaffold.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.23% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>16/61</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.23% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/61</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var fs             = require('fs');
+var path           = require('path');
+var npm            = require('npm');
+var async          = require('async');
+var subdirectories = ['bin', 'doc', 'examples', 'lib', 'test'];
+var constants      = require('./constants');
+var exec           = require('child_process').exec;
+var inquirer       = require('inquirer');
+&nbsp;
+/**
+ * Generates the module's subdirectory tree, with the following structure:
+ *
+ *     module_folder/
+ *         bin/
+ *         doc/
+ *         examples/
+ *         lib/
+ *         test/
+ *
+ * @param  {String}  root   The absolute path to the root folder of the module.
+ * @param  {Boolean} hasBin Is this module going to be used form the command line?
+ */
+<span class="fstat-no" title="function not covered" >function createSubdirectoryTree(dir, options, callback) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!options.cli) {</span>
+<span class="cstat-no" title="statement not covered" >        subdirectories.shift();</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    subdirectories.forEach(<span class="fstat-no" title="function not covered" >function(subdirectory) {</span></span>
+<span class="cstat-no" title="statement not covered" >        fs.mkdirSync(path.join(dir,subdirectory), '0755');</span>
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    callback(null, dir, options);</span>
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function exit(code, message) {</span>
+<span class="cstat-no" title="statement not covered" >    process.stdout.write(message || '\n');</span>
+<span class="cstat-no" title="statement not covered" >    process.exit(code);</span>
+}
+&nbsp;
+/**
+ * Goes through the templates and adds them to the current project.
+ */
+<span class="fstat-no" title="function not covered" >function parseTemplatesAndCreateExtras(dir, options, callback) {</span>
+&nbsp;
+    /**
+     * @member files
+     * Temporary holder for our template filenames, to be populated based on user options.
+     */
+<span class="cstat-no" title="statement not covered" >    var files = ['index.js', '.gitattributes'];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (options.editorconfig) {</span>
+<span class="cstat-no" title="statement not covered" >        files.push('.editorconfig');</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (options.lint.toLowerCase() === 'jshint') {</span>
+<span class="cstat-no" title="statement not covered" >        files.push('.jshintrc');</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >        files.push('.eslintrc');</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (options.gitignore) {</span>
+<span class="cstat-no" title="statement not covered" >        files.push('.gitignore');</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var currentFilePath = '';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    files.forEach(<span class="fstat-no" title="function not covered" >function(file) {</span></span>
+<span class="cstat-no" title="statement not covered" >        currentFilePath = __dirname + '/templates/' + file;</span>
+<span class="cstat-no" title="statement not covered" >        fs.createReadStream(currentFilePath).pipe(fs.createWriteStream(file));</span>
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    callback(null, dir);</span>
+}
+&nbsp;
+/**
+ * This function initializes the `npm init` process.
+ * It will be on by default
+ * Makes sure that package.json is generated in the right directory
+ */
+<span class="fstat-no" title="function not covered" >function initNpm(dir, callback) {</span>
+<span class="cstat-no" title="statement not covered" >    npm.load({}, <span class="fstat-no" title="function not covered" >function(err) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            exit(constants.ERROR_EXIT,</span>
+                'npm.init() -- package.json not generated -- ABORTING\n');
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        npm.init(dir, {}, <span class="fstat-no" title="function not covered" >function(error) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (error) {</span>
+<span class="cstat-no" title="statement not covered" >                exit(constants.ERROR_EXIT,</span>
+                    'npm.init() -- package.json not generated -- ABORTING\n');
+            }
+<span class="cstat-no" title="statement not covered" >            callback(null);</span>
+&nbsp;
+        });
+    });
+}
+&nbsp;
+/**
+ * Creates the module root folder based on the module name passed to the create subdommand.
+ * @param  {String} dir     The path directory(future) that will host the module's codebase.
+ * @param  {Object} options Tool configuration options.
+ * @param {Function} callback The next function in line -- required by async.waterfall
+ */
+<span class="fstat-no" title="function not covered" >function createModuleRoot(dir, options, callback) {</span>
+<span class="fstat-no" title="function not covered" >    function _runWhenDone(err) {</span>
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            throw err;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        process.chdir(dir);</span>
+<span class="cstat-no" title="statement not covered" >        callback(null, dir, options);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (options.moduleExists) {</span>
+<span class="cstat-no" title="statement not covered" >        process.chdir(dir);</span>
+<span class="cstat-no" title="statement not covered" >        exec('rm -rf `ls -Ab`', _runWhenDone);</span>
+    }  else {
+<span class="cstat-no" title="statement not covered" >        fs.mkdir(dir, _runWhenDone);</span>
+    }
+}
+&nbsp;
+/**
+ * Processes user input and decides whether the user wants to create a new module or overwrite an old one.
+ * @param  {String}   dir      The absolute path for the new/current module
+ * @param  {Object}   options  The tool configuration options
+ * @param  {Function} callback The callback to be called next -- required by async.waterfall
+ */
+<span class="fstat-no" title="function not covered" >function processOptions(dir, options, callback) {</span>
+<span class="cstat-no" title="statement not covered" >    if (options.moduleExists) {</span>
+<span class="cstat-no" title="statement not covered" >        inquirer.prompt([</span>
+            {
+                type : 'confirm',
+                name : 'overwrite',
+                message : 'The directory "' + path.basename(dir) + '" already exists, do you want to overwrite?',
+                default : false
+            }
+        ], <span class="fstat-no" title="function not covered" >function (answers) {</span>
+<span class="cstat-no" title="statement not covered" >            if (answers.overwrite) {</span>
+<span class="cstat-no" title="statement not covered" >                callback(null, dir, options);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                process.exit(constants.ERROR_EXIT);</span>
+            }
+        });
+    } else {
+<span class="cstat-no" title="statement not covered" >        callback(null, dir, options);</span>
+    }
+}
+&nbsp;
+&nbsp;
+module.exports = <span class="fstat-no" title="function not covered" >function(dir, options) {</span>
+<span class="cstat-no" title="statement not covered" >    async.waterfall([</span>
+        async.apply(processOptions, dir, options),
+        createModuleRoot,
+        createSubdirectoryTree,
+        parseTemplatesAndCreateExtras,
+        initNpm
+    ], <span class="fstat-no" title="function not covered" >function(err) {</span>
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            throw err;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        exit(constants.SUCCESS_EXIT,</span>
+                'Successfully scaffolded npm package.\n');
+    });
+&nbsp;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jun 06 2016 16:04:18 GMT+0300 (EEST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
