@@ -1,5 +1,6 @@
 .idea
 .tern-port
 dist
+.nyc_output
 node_modules
 .DS_Store
