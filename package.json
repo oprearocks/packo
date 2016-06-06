@@ -2,14 +2,21 @@
   "name": "packo",
   "version": "2.3.4",
   "description": "An npm module scaffolding cli tool.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "directories": {
     "doc": "doc",
     "example": "examples",
     "test": "test"
   },
   "scripts": {
-    "test": "npm test"
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register --recursive -R min",
+    "test:watch": "npm t -- --watch",
+    "coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text --require babel-register npm t",
+    "prebuild": "npm run coverage",
+    "build": "./node_modules/.bin/babel src -d dist --source-maps"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.netop.com/content/repositories/live-guide/"
   },
   "keywords": [
     "scaffolding",
@@ -35,5 +42,14 @@
     "npm": "^2.1.18",
     "nsp-api": "^1.0.3"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "nyc": "^6.4.4"
+  }
 }
